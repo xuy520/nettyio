@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Component
 public class ScheduleMessage {
-    @Scheduled(cron = "0/2 * * * * ? ")
+    @Scheduled(cron = "0/1 * * * * ? ")
     public void pushMessage() {
         for (SocketIOClient client : ClientOnlineNumber.getClients()) {
             Date currentTime = new Date();
